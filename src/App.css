@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-body {
+#root {
   background-color: #111;
 }
 
@@ -15,11 +15,12 @@ body {
   max-width: 1200px;
   background-color: white;
   margin: 0 auto;
+  min-height: 100%;
 }
 
 header {
   background-color: #3e6141;
-  padding: 20px;
+  padding: 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -27,10 +28,54 @@ header {
 }
 
 .title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   padding-top: 6px;
 }
 
 .logo {
   width: 120px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cards .card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  color: white;
+  background-color: #111;
+  padding: 25px;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.cards img {
+  width: 125px;
+  margin-bottom: 15px;
+}
+
+.playlists {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+
+.playlists p {
+  font-size: large;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+footer {
+  text-align: center;
+  background-color: #111;
+  padding-top: 5px;
+  color: white;
+}
+
+footer p {
+  padding: 10px 0;
 }
