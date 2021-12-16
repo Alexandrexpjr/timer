@@ -9,14 +9,14 @@ import timerContext from "./context/timerContext";
 import { genders } from "./helpers";
 
 function App() {
-  const { choosenGender, timeHasCome } = useContext(timerContext);
+  const { choosenGender, timeHasCome, timerIsRunning } = useContext(timerContext);
   return (
     <div className="all-content">
       <Header />
       <Timer />
       <Playlist />
       {
-        choosenGender && <ReactPlayer url={genders[choosenGender]} playing={!timeHasCome} height={0} width={0}/>
+        choosenGender && <ReactPlayer url={genders[choosenGender]} playing={!timeHasCome && timerIsRunning} height={0} width={0}/>
       }
       <Footer />
     </div>

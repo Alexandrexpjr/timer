@@ -31,3 +31,15 @@
   padding: 10px 20px 5px 20px;
   font-family: 'Luckiest Guy', cursive;
 }
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.buttons button {
+  margin-right: 15px;
+  font-family: 'Luckiest Guy', cursive;
+  padding: 10px 20px 5px 20px;
+}
