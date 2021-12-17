@@ -5,6 +5,7 @@ function TimerProvider({ children }) {
   const [choosenGender, setChoosenGender] = useState(undefined);
   const [timeHasCome, setTimeHasCome] = useState(false);
   const [timerIsRunning, setRunning] = useState(false);
+  const [presetTimers, setPresetTimers] = useState([]);
   const INITIAL_VALUE = {
     choosenGender,
     setChoosenGender,
@@ -12,6 +13,8 @@ function TimerProvider({ children }) {
     setTimeHasCome,
     timerIsRunning,
     setRunning,
+    presetTimers,
+    setPresetTimers,
   };
   return (
     <TimerContext.Provider value={ INITIAL_VALUE}>

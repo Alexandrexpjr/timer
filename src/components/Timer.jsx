@@ -9,7 +9,7 @@ function Timer() {
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
   const [minutesReceived, setMinutesReceived] = useState(0);
-  const { timeHasCome, setTimeHasCome, setRunning } = useContext(timerContext);
+  const { timeHasCome, setTimeHasCome, setRunning, presetTimers, setPresetTimers } = useContext(timerContext);
   const [intervalId, setIntervalId] = useState('');
   const [disabled, setDisabled] = useState(true);
 
@@ -34,6 +34,26 @@ function Timer() {
   const onStartButtonClick = () => {
     clearInterval(intervalId);
     startTimer(minutesReceived);
+  }
+
+  const onSavePresetButtonClick = () => {
+    if(presetTimers.includes(minutesReceived)) {
+      return;
+    }
+
+    if (minutesReceived && presetTimers.length < 2) {
+      setPresetTimers([...presetTimers, minutesReceived]);
+    }
+    if (presetTimers.length === 2) {
+      presetTimers.shift();
+      setPresetTimers([...presetTimers, minutesReceived])
+    }
+  }
+
+  const onPresetTimerButtonClick = (timer) => {
+    clearInterval(intervalId);
+    setMinutesReceived(timer)
+    startTimer(timer);
   }
 
   const onPauseButtonClick = () => {
@@ -74,7 +94,7 @@ function Timer() {
 
   const handleChange = ({ target }) => {
     const { value } = target;
-    const parsedValue = parseInt(value);
+    const parsedValue = parseFloat(value);
     console.log(parsedValue)
     if (!parsedValue || parsedValue <= 0) {
       return setDisabled(true);
@@ -90,6 +110,7 @@ function Timer() {
         <div>
           <input type="number" id="minutesInpt" onChange={ handleChange } min={ 0 }/>
           <TimerButton text="Começar" id="minutesBtn" handleClick={ onStartButtonClick } disabled={disabled}/>
+          <TimerButton text="Salvar" id="savePresetBtn" handleClick={ onSavePresetButtonClick } disabled={disabled}/>
         </div>
       </div>
       <div className="timer">
@@ -103,6 +124,13 @@ function Timer() {
         <TimerButton text="Reiniciar" id="restartBtn" handleClick={ onStartButtonClick } />
         <TimerButton text="+ 1" id="addOneMinuteBtn" handleClick={ onAddButtonClick } />
         <TimerButton text="- 1" id="decreaseOneMinuteBtn" handleClick={ onDecreaseButtonClick } />
+        {
+          presetTimers && presetTimers.map((timer) => {
+            return (
+              <TimerButton text={`${timer} min`} key={ Math.random() } id="presetBtn" handleClick={ () => onPresetTimerButtonClick(timer) }/>
+            )
+          })
+        }
       </div>
       {
         timeHasCome && <Audio isPlaying={ timeHasCome } />
