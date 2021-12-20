@@ -53,6 +53,10 @@ header {
   box-shadow: 3px 3px 8px 5px rgba(0,0,0,0.7);
 }
 
+.card .gender {
+  display: none;
+}
+
 .card:hover {
   transform: scale(1.15);
   box-shadow: 1px 1px 8px 3px rgba(0,0,0,0.7);
@@ -94,4 +98,105 @@ footer p {
 
 footer p a {
   text-decoration: none;
+}
+
+.timer {
+  font-size: 3rem;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.timerHandlers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.timerHandlers p {
+  font-size: large;
+}
+
+.timerHandlers div {
+  display: flex;
+  margin-top: 10px;
+}
+
+#minutesInpt {
+  margin-right: 10px;
+  width: 150px;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.minutesBtn, .savePresetBtn, .presetBtn {
+  padding: 10px 20px 5px 20px;
+  font-family: 'Luckiest Guy', cursive;
+  margin-right: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.buttons button {
+  margin-right: 15px;
+  font-family: 'Luckiest Guy', cursive;
+  padding: 10px 20px 5px 20px;
+}
+
+@media screen and (max-width: 750px) {
+  header {
+    width: 100%;
+  }
+  .title {
+    font-size: 1.75rem;
+  }
+  .logo {
+    width: 100px;
+  }
+  .cards .card {
+    padding: 15px 10px;
+    font-size: 1rem;
+    box-shadow: none;
+  }
+  .card img {
+    width: 75px;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+  .buttons button {
+    margin-right: 7px;
+    padding: 10px 15px 5px 15px;
+  }
+  .buttons .playBtn {
+    padding-bottom: 8px;
+  }
+  .timer {
+    font-size: 2.5rem;
+  }
+  #minutesInpt {
+    width: 100px;
+    font-size: 14px;
+  }
+  .savePresetBtn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cards .card {
+    background: none;
+  }
+  .card .gender {
+    display: block;
+    color: black;
+  }
+  .card span {
+    display: none;
+  } 
 }

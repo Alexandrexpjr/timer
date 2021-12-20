@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react';
 import timerContext from '../context/timerContext';
 import Audio from './Audio';
 import TimerButton from './Button';
-import './timer.css';
 
 function Timer() {
   const [hours, setHours] = useState(0);
