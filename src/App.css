@@ -81,7 +81,7 @@ header {
   margin-bottom: 30px;
 }
 
-footer {
+footer{
   text-align: center;
   background-color: #111;
   padding-top: 5px;
@@ -90,4 +90,8 @@ footer {
 
 footer p {
   padding: 10px 0;
+}
+
+footer p a {
+  text-decoration: none;
 }
