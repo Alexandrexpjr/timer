@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/timer/static/css/main.d0171d11.chunk.css",
+    "main.js": "/timer/static/js/main.4ed39d35.chunk.js",
+    "main.js.map": "/timer/static/js/main.4ed39d35.chunk.js.map",
+    "runtime-main.js": "/timer/static/js/runtime-main.e7d395ab.js",
+    "runtime-main.js.map": "/timer/static/js/runtime-main.e7d395ab.js.map",
+    "static/js/2.f6d0815c.chunk.js": "/timer/static/js/2.f6d0815c.chunk.js",
+    "static/js/2.f6d0815c.chunk.js.map": "/timer/static/js/2.f6d0815c.chunk.js.map",
+    "static/js/3.74cce23b.chunk.js": "/timer/static/js/3.74cce23b.chunk.js",
+    "static/js/3.74cce23b.chunk.js.map": "/timer/static/js/3.74cce23b.chunk.js.map",
+    "index.html": "/timer/index.html",
+    "static/css/main.d0171d11.chunk.css.map": "/timer/static/css/main.d0171d11.chunk.css.map",
+    "static/js/2.f6d0815c.chunk.js.LICENSE.txt": "/timer/static/js/2.f6d0815c.chunk.js.LICENSE.txt",
+    "static/media/Rex.eee65c9f.mpeg": "/timer/static/media/Rex.eee65c9f.mpeg",
+    "static/media/jurassic-logo.2a98d2fd.png": "/timer/static/media/jurassic-logo.2a98d2fd.png",
+    "static/media/parasaurolofi.62046dd2.png": "/timer/static/media/parasaurolofi.62046dd2.png",
+    "static/media/popteranodon.48c8d096.png": "/timer/static/media/popteranodon.48c8d096.png",
+    "static/media/velocirocktor.02a96351.webp": "/timer/static/media/velocirocktor.02a96351.webp"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e7d395ab.js",
+    "static/js/2.f6d0815c.chunk.js",
+    "static/css/main.d0171d11.chunk.css",
+    "static/js/main.4ed39d35.chunk.js"
+  ]
+}
