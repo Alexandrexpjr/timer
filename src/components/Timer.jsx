@@ -22,7 +22,7 @@ function Timer() {
         clearInterval(id);
       }
       setHours(Math.floor(totalSeconds / 3600));
-      setMinutes(Math.floor(totalSeconds / 60));
+      setMinutes(Math.floor((totalSeconds % 3600) / 60));
       setSeconds(totalSeconds % 60);
       setTimeHasCome(!!(totalSeconds <= 8 && totalSeconds));
       totalSeconds -= 1;
@@ -82,7 +82,7 @@ function Timer() {
   }
 
   const onDecreaseButtonClick = () => {
-    if (minutes === 0) {
+    if (minutes === 0 && hours === 0) {
       return stopTimer();
     }
     clearInterval(intervalId);
